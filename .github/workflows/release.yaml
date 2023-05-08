@@ -17,3 +17,6 @@ jobs:
       - run: "bash ci/pages.sh"
         env:
           GH_PRIVATE_KEY: ${{ secrets.GH_PRIVATE_KEY }}
+      - run: "bash ci/release.sh"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
