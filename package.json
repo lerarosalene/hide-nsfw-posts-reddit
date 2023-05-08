@@ -1,6 +1,6 @@
 {
   "name": "hide-nsfw-posts-reddit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hides NSFW posts from Reddit feed",
   "scripts": {
     "build": "node build.js"

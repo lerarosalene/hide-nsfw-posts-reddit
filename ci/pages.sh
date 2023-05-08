@@ -23,7 +23,8 @@ pushd "${TMP_DIR}"
       rm -rf *
       touch .nojekyll
       echo "${INDEX_HTML}" > index.html
-      cp "${SRC_DIR}/dist/hide-nsfw-posts-reddit.user.js" .
+      mkdir -p latest
+      cp "${SRC_DIR}/dist/hide-nsfw-posts-reddit.user.js" latest/
     popd
 
     git add docs
