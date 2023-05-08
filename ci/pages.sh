@@ -26,6 +26,7 @@ pushd "${TMP_DIR}"
       cp "${SRC_DIR}/dist/hide-nsfw-posts-reddit.user.js" .
     popd
 
+    git add docs
     git config user.name "github actions runner"
     git config user.email "lerarosalene@outlook.com"
     git commit --allow-empty -m "Release $(date +%s)"
