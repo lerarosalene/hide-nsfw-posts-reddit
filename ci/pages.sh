@@ -27,7 +27,7 @@ pushd "${TMP_DIR}"
     popd
 
     git add docs
-    git commit --allow-empty -m "Release $(date +%s)"
+    git commit --allow-empty -m "Release $(date +%s)" --author "github actions runner <>"
     GIT_SSH_COMMAND="ssh -o IdentitiesOnly=yes -i $(pwd)/.ssh/id_rsa" git push
   popd
 popd
