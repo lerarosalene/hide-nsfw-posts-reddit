@@ -16,7 +16,7 @@ pushd "${TMP_DIR}"
   echo "${GH_PRIVATE_KEY}" | base64 -d > .ssh/id_rsa
   chmod 600 .ssh/id_rsa
 
-  GIT_SSH_COMMAND="ssh -o IdentitiesOnly=yes -i $(pwd)/.ssh/id_rsa" git clone --depth=1 -b gh-pages git@github.com:lerarosalene/hide-nsfw-posts-reddit.git
+  GIT_SSH_COMMAND="ssh -o IdentitiesOnly=yes -i ${TMP_DIR}/.ssh/id_rsa" git clone --depth=1 -b gh-pages git@github.com:lerarosalene/hide-nsfw-posts-reddit.git
   pushd "hide-nsfw-posts-reddit"
     mkdir -p docs
     pushd docs
@@ -29,6 +29,6 @@ pushd "${TMP_DIR}"
     git config user.name "github actions runner"
     git config user.email "lerarosalene@outlook.com"
     git commit --allow-empty -m "Release $(date +%s)"
-    GIT_SSH_COMMAND="ssh -o IdentitiesOnly=yes -i $(pwd)/.ssh/id_rsa" git push
+    GIT_SSH_COMMAND="ssh -o IdentitiesOnly=yes -i ${TMP_DIR}/.ssh/id_rsa" git push
   popd
 popd
