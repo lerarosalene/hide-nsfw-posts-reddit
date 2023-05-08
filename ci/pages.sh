@@ -15,7 +15,7 @@ pushd "${TMP_DIR}"
   mkdir -p .ssh
   echo "${GH_PRIVATE_KEY}" | base64 -d > .ssh/id_rsa
 
-  GIT_SSH_COMMAND="ssh -o IdentitiesOnly=yes -i $(pwd)/.ssh/id_rsa" git clone -b --depth=1 gh-pages git@github.com:lerarosalene/hide-nsfw-posts-reddit.git
+  GIT_SSH_COMMAND="ssh -o IdentitiesOnly=yes -i $(pwd)/.ssh/id_rsa" git clone --depth=1 -b gh-pages git@github.com:lerarosalene/hide-nsfw-posts-reddit.git
   pushd "hide-nsfw-posts-reddit"
     mkdir -p docs
     pushd docs
