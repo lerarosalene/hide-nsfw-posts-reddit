@@ -1,0 +1,15 @@
+{
+  "name": "hide-nsfw-posts-reddit",
+  "version": "1.0.0",
+  "description": "Hides NSFW posts from Reddit feed",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": [],
+  "author": "Larissa Rosalene <lerarosalene@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.17.18",
+    "userscript-header-format": "^1.1.0"
+  }
+}
