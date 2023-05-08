@@ -14,6 +14,7 @@ INDEX_HTML="<!DOCTYPE html><html><head></head><body></body></html>";
 pushd "${TMP_DIR}"
   mkdir -p .ssh
   echo "${GH_PRIVATE_KEY}" | base64 -d > .ssh/id_rsa
+  chmod 600 .ssh/id_rsa
 
   GIT_SSH_COMMAND="ssh -o IdentitiesOnly=yes -i $(pwd)/.ssh/id_rsa" git clone --depth=1 -b gh-pages git@github.com:lerarosalene/hide-nsfw-posts-reddit.git
   pushd "hide-nsfw-posts-reddit"
