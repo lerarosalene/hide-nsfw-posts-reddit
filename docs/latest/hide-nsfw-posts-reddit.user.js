@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hide NSFW posts in feed
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  Hides NSFW posts in feed without messing with account settings
 // @author       Larissa Rosalene <lerarosalene@outlook.com>
 // @match        *://*.reddit.com/*
